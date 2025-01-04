@@ -48,7 +48,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     info!("Starting connection");
 
-    let paper_acct_url = "https://paper-api.alpaca.markets/v2/account";
+    const PAPER_ACCT_URL: &str = "https://paper-api.alpaca.markets/v2/account";
 
     const API_KEY_ID: &str = "APCA_API_KEY_ID";
     const API_SECRET_KEY_ID: &str = "APCA_API_SECRET_KEY";
@@ -57,13 +57,14 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let secret_key = std::env::var(API_SECRET_KEY_ID)?;
 
     let response = reqwest::blocking::Client::new()
-        .get(paper_acct_url)
+        .get(PAPER_ACCT_URL)
         .header("APCA-API-KEY-ID", key_id)
         .header("APCA-API-SECRET-KEY", secret_key)
         .send()?;
 
     if response.status() != reqwest::StatusCode::OK {
         error!("Non-OK HTTP response!");
+        return Err("Bad request".into());
     } else {
         let json_body: GetAccountResp = response.json()?;
         dbg!(json_body);
