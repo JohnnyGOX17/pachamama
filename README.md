@@ -10,6 +10,7 @@ Name is from [Wikipedia article on Alpacas](https://en.wikipedia.org/wiki/Alpaca
 
 - [Alpaca Markets Docs](https://docs.alpaca.markets/)
   + [Alpaca Learn](https://alpaca.markets/learn)
+  + [The Options Wheel Strategy Explained (and How to Implement Using Python and Alpaca's Trading API)](https://alpaca.markets/learn/options-wheel-strategy)
 - [alpaca.markets Paper Trading Dashboard](https://app.alpaca.markets/paper/dashboard/overview)
 - [d-e-s-o/apca](https://github.com/d-e-s-o/apca): A crate for interacting with the Alpaca API at alpaca.markets.
 
