@@ -1,9 +1,13 @@
 {
   "permissions": {
     "allow": [
-      "Bash(cat:*)"
+      "Bash(cat:*)",
+      "Skill(interface-design)"
     ],
     "deny": [],
     "ask": []
+  },
+  "enabledPlugins": {
+    "interface-design@interface-design": true
   }
 }
